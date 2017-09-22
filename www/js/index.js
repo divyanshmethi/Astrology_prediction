@@ -51,6 +51,7 @@ var app = {
 function sign(){
     var x=document.getElementById("month").value;
     var y=document.getElementById("date").value;
+    var z=document.getElementById("year").value;
 
     if (x=="March" && (y>=21 && y<=31) || x=="April" && (y>=1 && y<=19) ){
         document.getElementById("trait").innerHTML="You are <b>Aries</b>";
@@ -88,6 +89,9 @@ function sign(){
     else if(x=="February" && (y>=19 && y<=28) || x=="March" && (y>=1 && y<=20) ){
         document.getElementById("trait").innerHTML="You are <b>Pisces</b>";
     }
+    else if(x=="February" && (y>=19 && y<=29) && (z%400==0 || z%4==0)){
+        document.getElementById("trait").innerHTML="You are <b>Pisces</b>";
+    }
     else{
         document.getElementById("trait").innerHTML="You are nothing.";
     }
@@ -97,7 +101,7 @@ function sign(){
 function traits(){
     var x=document.getElementById("month").value;
     var y=document.getElementById("date").value;
-
+    var z=document.getElementById("year").value;
     var Aries="Aries people are high-spirited, courageous, and independent - though they can turn sulky if they have to take orders";
     var Taurus="People born under the sign of Taurus are most noted for their dependability, patience and perseverance. These qualities often lead them to success in achieving their goals in life. ";
     var Gemini="Amusing, charming and witty, Gemini's are usually surrounded by many friends.";
@@ -146,6 +150,9 @@ function traits(){
     }
     else if(x=="February" && (y>=19 && y<=28) || x=="March" && (y>=1 && y<=20) ){
         document.getElementById("sign").innerHTML=Pisces;
+    }
+    else if(x=="February" && (y>=19 && y<=29) && (z%400==0 || z%4==0)){
+        document.getElementById("trait").innerHTML="You are <b>Pisces</b>";
     }
     else{
         document.getElementById("sign").innerHTML="You have no trait.";
