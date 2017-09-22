@@ -92,7 +92,7 @@ function sign(){
         document.getElementById("trait").innerHTML="You are <b>Pisces</b>";
     }
     else{
-        document.getElementById("trait").innerHTML="You are nothing.";
+        document.getElementById("trait").innerHTML="Incorrect Data...... Please check your the entered date.";
     }
 
 }
@@ -155,7 +155,7 @@ function traits(){
         document.getElementById("sign").innerHTML=Pisces;
     }
     else{
-        document.getElementById("sign").innerHTML="You have no trait.";
+        document.getElementById("sign").innerHTML="Incorrect Data...... Please check your the entered date.";
     }
 
 }
